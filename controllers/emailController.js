@@ -35,7 +35,7 @@ class EmailController {
 
   async sendHTMLEmail(req, res, next) {
     try {
-      const { to, subject, html } = req.body;
+      const { to, cc, subject, html } = req.body;
 
       if (!to || !subject || !html) {
         return res.status(StatusCodes.BAD_REQUEST).json({
@@ -44,7 +44,12 @@ class EmailController {
         });
       }
 
-      const result = await emailService.sendHTMLEmail({ to, subject, html });
+      const result = await emailService.sendHTMLEmail({
+        to,
+        cc,
+        subject,
+        html,
+      });
 
       res.status(StatusCodes.OK).json({
         success: true,
@@ -60,7 +65,7 @@ class EmailController {
 
   async sendTextEmail(req, res, next) {
     try {
-      const { to, subject, text } = req.body;
+      const { to, cc, subject, text } = req.body;
 
       if (!to || !subject || !text) {
         return res.status(StatusCodes.BAD_REQUEST).json({
@@ -69,7 +74,12 @@ class EmailController {
         });
       }
 
-      const result = await emailService.sendTextEmail({ to, subject, text });
+      const result = await emailService.sendTextEmail({
+        to,
+        cc,
+        subject,
+        text,
+      });
 
       res.status(StatusCodes.OK).json({
         success: true,

@@ -7,7 +7,7 @@ class EmailService {
     this.smtpClient = SMTPClient;
   }
 
-  async sendBasicEmail({ to, subject, text, html }) {
+  async sendBasicEmail({ to, cc, subject, text, html }) {
     if (!this.smtpClient.transporter) {
       throw new Error(
         "Email service is not available due to missing SMTP configuration"
@@ -44,11 +44,11 @@ class EmailService {
     }
   }
 
-  async sendHTMLEmail({ to, subject, html }) {
+  async sendHTMLEmail({ to, cc, subject, html }) {
     return this.sendBasicEmail({ to, subject, html });
   }
 
-  async sendTextEmail({ to, subject, text }) {
+  async sendTextEmail({ to, cc, subject, text }) {
     return this.sendBasicEmail({ to, subject, text });
   }
 }
