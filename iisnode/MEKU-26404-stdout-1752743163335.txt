@@ -1,0 +1,5 @@
+2025-07-17 12:06:03 [32minfo[39m: Email Service running on port \\.\pipe\15e56702-47a0-4a7f-9d91-4e07fb35bdf7
+2025-07-17 12:06:03 [32minfo[39m: - - - [17/Jul/2025:09:06:03 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+2025-07-17 12:06:04 [32minfo[39m: SMTP connection verified successfully
+2025-07-17 12:07:59 [32minfo[39m: Email sent to makitedesta@gmail.com,crlover2020@gmail.com with message ID: <a1d5aa8a-6d1d-d24f-5f6c-c694025cb9df@localhost>
+2025-07-17 12:07:59 [32minfo[39m: - - - [17/Jul/2025:09:07:59 +0000] "POST /api/email/send HTTP/1.1" 200 124 "-" "PostmanRuntime/7.44.1"

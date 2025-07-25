@@ -26,7 +26,7 @@ app.get("/health", (req, res) => {
 });
 
 // Error Handling
-// app.use(errorHandler);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3004;
 app.listen(PORT, () => {
